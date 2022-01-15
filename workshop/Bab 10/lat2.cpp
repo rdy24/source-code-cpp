@@ -1,30 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-	int a,data[a],max,min;
+main() {
+	int a,poin[a];
 	cout << "Masukan Banyak data : ";cin >> a;
 	cout << endl;
+	string nama[a];
 	for(int i = 0;i < a;i++) {
-		cout << "Tinggi mahasiswa ke - " << i+1 << " : ";cin >> data[i];
+		cout << "Data ke - " << i+1 << endl;
+		cout << "Masukan Nama : ";cin >> nama[i];
+		cout << "Masukan poin : ";cin >> poin[i];
+		cout << endl;
 	}
-	cout << endl;
-	cout << "Data Tinggi Badan Mahasiswa" << endl << endl;
-	for(int i = 0;i < a;i++) {
-		cout << "Tinggi mahasiswa ke - " << i+1 << " : " << data[i] << endl;
-		if(i == 0) {
-			min = data[i];
-			max = data[i];
-		} else if(min > data[i]) {
-			min = data[i];
-		} else if(max < data[i]) {
-			max = data[i];
+	cout << "\nGrafik data" << endl;
+	cout << "----------------------------------" << endl;
+	for (int i = 0;i < a;i++) {
+		cout << "Data ke - " << i+1 << " " << nama[i] << " : ";
+		for(int b = 0;b < poin[i];b++) {
+			cout << "*";
 		}
+		cout << endl;
 	}
-
-	cout << "Tertinggi : " << max << endl;
-	cout << "Terendah : " << min << endl;
-	return 0;
-
 }
-
